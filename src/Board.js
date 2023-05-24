@@ -44,8 +44,9 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
       }
 
       initialBoard.push(newRow);
-      return initialBoard;
     }
+    console.log(initialBoard)
+    return initialBoard;
   }
 
     function hasWon() {
