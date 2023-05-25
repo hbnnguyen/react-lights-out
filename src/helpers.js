@@ -1,8 +1,21 @@
 "use strict";
 
-function getRandBoolean() {
-  let bool = Math.floor(Math.random() * 2);
-  return bool === 1;
+/**
+ * Gets a random boolean based on chanceLightsStartOn
+ * @param {Float} chanceLightStartsOn
+ * @returns Boolean
+ */
+function getBoolean(chanceLightStartsOn) {
+  return Math.random() <= chanceLightStartsOn;
 }
 
-export { getRandBoolean };
+/**
+ * Makes deep copy of matrix
+ * @param {Boolean[][]} matrix
+ * @returns Boolean[][]
+ */
+function deepCopyMatrix(matrix) {
+  return matrix.map(row => [...row]);
+}
+
+export { getBoolean, deepCopyMatrix };
